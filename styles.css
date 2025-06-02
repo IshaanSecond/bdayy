@@ -1,0 +1,943 @@
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+
+
+        }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #1db954;
+  color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 50%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+}
+.typewriter-message {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 16px;
+  margin: 1rem;
+}
+/* Floating hearts container - full screen overlay */
+#floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* So clicks pass through */
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Single heart style */
+.heart {
+  position: absolute;
+  bottom: -50px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(-45deg);
+  animation: floatUp linear forwards;
+  opacity: 0.8;
+}
+
+/* Create the heart shape */
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+/* Default theme styles here (already present) */
+
+/* Romantic theme overrides */
+body.romantic {
+  background: #ffe6f0; /* soft pink background */
+  color: #5a0a36; /* dark wine color text */
+  font-family: 'Dancing Script', cursive, 'Poppins', sans-serif; /* add a romantic font fallback */
+  transition: background 0.5s, color 0.5s;
+}
+
+body.romantic .container {
+  background: #fff0f6; /* lighter pink container */
+  box-shadow: 0 0 15px #ff7faa88;
+}
+
+body.romantic .left {
+  background: #fce4ec; /* blush pink sidebar */
+}
+
+body.romantic .right {
+  background: #fdeef4; /* light pink content area */
+}
+
+body.romantic button, 
+body.romantic .library-logo-text,
+body.romantic .home-text, 
+body.romantic .search-text,
+body.romantic #copyright {
+  color: #a00000;
+}
+
+body.romantic .play-button svg circle {
+  fill: #64001e !important;
+}
+
+body.romantic .play-button svg polygon {
+  fill: #64001e !important;
+}
+body.romantic .home-search {
+  background-color: #64001e;
+}
+
+body.romantic .top-nav {
+  background-color: #a10232;
+}
+
+body.romantic .home-search input {
+  color: #64001e;
+}
+body.romantic .library {
+  background-color: #64001e;
+}
+/* Add some heart/petal pink highlights */
+body.romantic button:hover {
+  background-color: #64001e;
+  color: white;
+  transition: 0.3s;
+}
+
+body.romantic .custom-player{
+  background-color: #2e000e;
+  color: white;
+  transition: 0.3s;
+}
+body.romantic .main-content{
+  background: #64001e;
+  color: white;
+  transition: 0.3s;
+}
+.modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.romantic .right-footer-container{
+    background-color: #64001e;
+}
+/* Add romantic font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.heart::before {
+  top: 0;
+  left: 10px;
+}
+
+.heart::after {
+  top: -10px;
+  left: 0;
+}
+
+/* Animation moving hearts up and fading out */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-150vh) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+#typewriter::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+        .left {
+            width: 23vw;
+            position: fixed;
+        }
+
+        .home-search {
+            border-radius: 8px;
+            background-color: #121212;
+            margin: 7px;
+            padding: 1.6vw;
+            margin-bottom: 0.1vwpx;
+        }
+
+        .right {
+            width: 80vw;
+            margin-left: 48vh;
+
+        }
+
+        .home-search ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+        }
+        .modal-content {
+  animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+        .home-search ul li:not(:last-child) {
+            filter: invert(1);
+        }
+
+        .home-search ul li:last-child {
+            filter: invert(0.7);
+        }
+
+        .home-search ul li:last-child:hover {
+            filter: invert(1);
+            cursor: pointer;
+        }
+
+        img.logo {
+            width: 6.2vw;
+            margin-bottom: 1vw;
+        }
+
+        img.home {
+            width: 1.5vw;
+            margin: 0.7vw 1.2vw 1vw 0vw;
+
+        }
+
+        img.search {
+            width: 1.5vw;
+            margin: 1vw 1.2vw 0.7vw 0vw;
+        }
+
+        .search-text {
+            margin: 8px 18px 0px 0px;
+
+        }
+
+        .home-text,
+        .search-text {
+            font-weight: bolder;
+            font-size: medium;
+            text-align: center;
+            display: flex;
+            
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.6vw 1.6vw 0vw 1.6vw;
+        }
+
+        .top-left {
+            display: flex;
+            gap: 1vw;
+        }
+
+        .library {
+            border-radius: 8px;
+            background-color: #121212;
+            margin: 0.5vw;
+            height: 26.5vw;
+
+
+        }
+
+        img.library-logo {
+            width: 2vw;
+            filter: invert(0.7);
+        }
+
+        img.library-logo:hover {
+            cursor: pointer;
+            filter: invert(1);
+
+        }
+
+        .library-logo-text:hover {
+            cursor: pointer;
+            filter: invert(1);
+
+        }
+
+        .plus-icon button:hover {
+            cursor: pointer;
+            filter: invert(1);
+            background-color: rgba(128, 128, 128, 0.137);
+            border-radius: 30px;
+
+        }
+
+        .library .top button {
+            background-color: transparent;
+            border: none;
+        }
+
+        .library-logo-text {
+            font-weight: bolder;
+            font-size: medium;
+            text-align: center;
+            filter: invert(0.7);
+            margin-top: 0.2vw;
+
+        }
+
+        .plus-icon button {
+            width: 35px;
+            background-color: rgba(128, 128, 128, 0);
+            border: none;
+            padding: 7px 10px;
+            border-radius: 30px;
+            filter: invert(0.7);
+        }
+
+        .center {
+            overflow: scroll;
+            height: 14vw;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.39) transparent;
+            scroll-behavior: smooth;
+            padding: 0.5vw;
+        }
+
+        .center:hover {
+            scrollbar-color: rgba(255, 255, 255, 0.692) transparent;
+
+        }
+
+        .box1 {
+            background-color: rgba(128, 128, 128, 0.137);
+            width: 19vw;
+            padding: 1vw;
+            border-radius: 7px;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        #text1 {
+            font-size: medium;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.3vw;
+        }
+
+        #text2 {
+            font-size: smaller;
+            color: white;
+            font-weight: 500;
+
+        }
+
+        .create-playlist button {
+            background-color: white;
+            color: black;
+        }
+
+        .create-playlist:hover {
+            padding: 0.7vw 1.4vw;
+        }
+
+        .create-playlist {
+            margin: 1.3vw 0vw 0vw 0vw;
+            padding: 0.3vw 1vw;
+            border-radius: 20px;
+            border: none;
+            font-weight: 600;
+            transition: all 0.1s linear;
+        }
+
+        .footer {
+            height: 10.3vw;
+            background-color: #121212;
+            padding: 0.1vw;
+            border-radius: 7px;
+
+        }
+
+        .elements button:hover {
+            cursor: pointer;
+        }
+
+        .elements button {
+            margin-top: 1vw;
+            margin-left: 1vw;
+            margin-right: 0.2vw;
+            background-color: transparent;
+            color: rgb(143, 141, 141);
+            border: none;
+            font-size: 10px;
+            font-weight: 600;
+
+        }
+
+        button.lang {
+            display: flex;
+            align-items: center;
+            font-size: smaller;
+            font-weight: bolder;
+
+            text-align: center;
+            border: 0.8px solid rgba(255, 255, 255, 0.315);
+            padding: 0.5vw 1vw;
+            border-radius: 30px;
+        }
+
+        button.lang:hover {
+            padding: 0.55vw 1.1vw;
+            border: 1px solid white;
+        }
+
+        .lang img {
+            filter: invert(1);
+            width: 1vw;
+            margin-right: 0.6vw;
+
+        }
+
+        .signup {
+            width: 99vw;
+            height: 4vw;
+            background: rgb(190, 0, 141);
+            background: linear-gradient(90deg, rgba(190, 0, 141, 1) 0%, rgba(52, 148, 230, 1) 100%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5vw;
+            position: fixed;
+            z-index: 1;
+        }
+
+        #text3 {
+            font-size: smaller;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.1vw;
+            margin-left: 0.9vw;
+        }
+
+        #text4 {
+            font-size: small;
+            color: white;
+            font-weight: 500;
+            margin-left: 0.9vw;
+        }
+
+        .signup-btn button {
+            padding: 0.7vw 2vw 0.7vw 2vw;
+            border-radius: 30px;
+            border: none;
+            margin-right: 2vw;
+            font-size: medium;
+            font-weight: 600;
+        }
+
+        .signup-btn button:hover {
+            padding: 0.8vw 2.1vw 0.8vw 2.1vw;
+            background-color: rgba(255, 255, 255, 0.904);
+        }
+
+        .right {
+            margin-top: 0.5vw;
+            margin-right: 3vw;
+            border-radius: 7px;
+            height: 40vw;
+            background-color: #121212;
+
+        }
+
+        .top-nav {
+            height: 4vw;
+            width: 75.5vw;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .arrows {
+            display: flex;
+            gap: 1vw;
+            margin-left: 1vw;
+        }
+
+        .left-arrow:hover {
+            cursor: not-allowed;
+        }
+
+        .right-arrow:hover {
+            cursor: not-allowed;
+        }
+
+        .left-arrow {
+            background-color: #0e0d0d;
+            width: 2.5vw;
+            border: none;
+            padding: 0.9vw 0.9vw;
+            border-radius: 30px;
+
+        }
+
+        .left-arrow img {
+            filter: invert(1);
+            display: flex;
+            align-items: center;
+
+        }
+
+        .right-arrow {
+            background-color: #0e0d0d;
+            width: 2.5vw;
+            border: none;
+            padding: 0.9vw 0.9vw;
+            border-radius: 30px;
+
+        }
+
+        .right-arrow img {
+            filter: invert(1);
+            display: flex;
+            align-items: center;
+
+        }
+
+        .login-side {
+            display: flex;
+            gap: 1.5vw;
+            margin-right: 3vw;
+            align-items: center;
+        }
+
+        .sup {
+            background-color: transparent;
+            font-size: medium;
+            font-weight: bold;
+            border: none;
+            color: gray;
+        }
+
+        .sup:hover {
+            color: white;
+        }
+
+        .login {
+            background-color: white;
+            color: #121212;
+            padding: 0.6vw 1.5vw;
+            border-radius: 30px;
+            font-size: medium;
+            font-weight: bold;
+            border: none;
+        }
+
+        .login:hover {
+            background-color: rgb(238, 238, 238);
+            padding: 0.6vw 1.6vw;
+
+
+        }
+
+        .main-content {
+            overflow: scroll;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.39) transparent;
+            scroll-behavior: smooth;
+            background: rgb(57, 57, 57);
+            background: linear-gradient(180deg, rgba(57, 57, 57, 0.507) 0%, rgba(18, 18, 18, 1) 30%);
+            height: 38.1vw;
+            border-radius: 6px;
+
+        }
+
+        ::-webkit-scrollbar {}
+
+        .row1,
+        .row2,
+        .row3 {
+            height: 20vw;
+        }
+
+        .text-area,
+        .text-area2,
+        .text-area3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 1.4vw;
+            margin-right: 1.4vw;
+
+        }
+
+        .heading,
+        .heading2,
+        .heading3 {
+            color: white;
+            margin-top: 1vw;
+        }
+
+        .heading:hover,
+        .heading2:hover,
+        .heading3:hover {
+            text-decoration: underline;
+        }
+
+        .showall-btn button,
+        .showall-btn2 button,
+        .showall-btn3 button {
+            margin-top: 1vw;
+            background-color: transparent;
+            color: grey;
+            border: none;
+            font-size: smaller;
+            font-weight: bold;
+        }
+
+        .showall-btn:hover,
+        .showall-btn2:hover,
+        .showall-btn3:hover {
+            border-bottom: 1px solid grey;
+            cursor: pointer;
+        }
+
+        .artists {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 1vw;
+        }
+
+        .albums {
+            display: flex;
+            justify-content: center;
+            gap: 2.5vw;
+            align-items: center;
+            margin-top: 1vw;
+        }
+
+        .radio {
+            display: flex;
+            justify-content: center;
+            gap: 2.5vw;
+            align-items: center;
+            margin-top: 1vw;
+
+        }
+
+        .cards,
+        .cards1,
+        .cards2 {
+            padding: 1vw;
+        }
+
+        .cards img {
+            width: 90px;
+            border-radius: 10px;
+            filter: drop-shadow(2px 3px 7px rgba(7, 7, 7, 0.76));
+            margin-left: 1rem;
+        }
+
+        .cards1 img {
+            width: 10vw;
+            border-radius: 3px;
+            filter: drop-shadow(2px 3px 7px rgba(7, 7, 7, 0.76));
+            z-index: 0;
+        }
+
+        .cards2 img {
+            width: 10vw;
+            border-radius: 3px;
+            filter: drop-shadow(2px 3px 7px rgba(7, 7, 7, 0.76));
+            z-index: 0;
+
+        }
+
+        .cards p,
+        .cards1 p,
+        .cards2 p {
+            color: white;
+            margin-left: 1vw;
+        }
+
+        #name {
+            font-weight: 500;
+            font-size: large;
+        }
+
+        .cards:hover {
+            background-color: #0e0d0da2;
+            border-radius: 7px;
+        }
+
+        .cards1:hover,
+        .cards2:hover {
+            background-color: #0e0d0da2;
+            border-radius: 7px;
+        }
+
+        .right-footer-container {
+            background: #121212;
+            margin-top: 9vh;
+
+        }
+
+        .right-footer-box {
+            display: flex;
+            justify-content: space-around;
+            gap: 4vw;
+            align-items: center;
+
+        }
+
+        .right-footer-box :not(:last-child) button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-weight: bolder;
+            padding: 0.5vw;
+            font-size: large;
+        }
+
+        .right-footer-box p {
+            text-decoration: none;
+        }
+
+        .handles {
+            display: flex;
+            gap: 1.2vw;
+            margin-bottom: 4vw;
+        }
+
+        .handles button img {
+            width: 1.5vw;
+            object-fit: cover;
+            filter: invert(1);
+
+        }
+
+        .handles button {
+            background-color: rgba(128, 128, 128, 0.137);
+            border-radius: 30px;
+            border: none;
+            padding: 0.3vw 0.5vw;
+        }
+
+        .company p {
+            text-align: left;
+            margin-left: 0.5vw;
+            text-decoration: none;
+        }
+
+        .communities p {
+            text-align: left;
+            margin-left: 0.5vw;
+        }
+
+        .links p {
+            text-align: left;
+            margin-left: 0.5vw;
+        }
+
+        .plans p {
+            text-align: left;
+            margin-left: 0.5vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(146, 146, 146);
+        }
+
+        hr {
+            margin-top: 1.5vw;
+            border: 0.1px solid rgba(128, 128, 128, 0.438);
+            width: 71vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #copyright {
+            margin-left: 2vw;
+            color: rgb(146, 146, 146);
+            font-size: smaller;
+            font-weight: 400;
+            padding-bottom: 4vw;
+        }
+
+        .custom-player {
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 16px;
+            max-width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            font-family: sans-serif;
+            gap: 20px;
+            margin-top: 3rem;
+        }
+
+        .player-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .player-left img {
+            height: 60px;
+            width: 60px;
+            border-radius: 4px;
+        }
+
+        .play-button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            margin-left: 10rem;
+        }
+
+        .play-button:hover {
+            transform: scale(1.05);
+        }
+
+
+        .track-info .track-title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .track-info .track-artist {
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+
+        .player-center {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            margin: 0 100px;
+            cursor: pointer;
+        }
+
+        .progress {
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        #seek {
+            width: 300px;
+            appearance: none;
+            height: 4px;
+            background: #535353;
+            border-radius: 2px;
+            outline: none;
+        }
+
+        #seek::-webkit-slider-thumb {
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            background: #fafcfb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .player-right {
+            display: flex;
+            align-items: center;
+        }
+
+        #volume {
+            width: 80px;
+            appearance: none;
+            height: 4px;
+            background: #535353;
+            border-radius: 2px;
+        }
+
+        #volume::-webkit-slider-thumb {
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            background: #1db954;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    

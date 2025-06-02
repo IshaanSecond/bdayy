@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday special - Spotify</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="home-search">
+                <ul>
+                    <li><img src="logo.svg" alt="logo" class="logo" title="Spotify"> </li>
+                    <li><img src="home.svg" alt="home" class="home">
+                        <div class="home-text">
+                            Home
+                            <p style="font-size: 10px; margin-top: 0.4rem; margin-left: 0.5rem;"> (Home? Yes you are my
+                                home!)</p>
+                        </div>
+                    </li>
+                    <li><img src="search.svg" alt="search" class="search">
+                        <div class="search-text">
+                            Search
+                            <p style="font-size: 10px; margin-top: 0.4rem; margin-left: 0.5rem;"> (Search? I already
+                                found you!)</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="library">
+                <div class="top">
+                    <div class="top-left">
+                        <button><img src="library-logo.svg" alt="library" class="library-logo"></button>
+                        <div class="library-logo-text">
+                            Your Library
+                        </div>
+
+                    </div>
+                    <div class="plus-icon">
+
+                        <button title="Create Playlist or folder"><img src="plusicon.svg"
+                                alt="plus-icon"></button>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <div class="box1">
+                        <div class="typewriter-message">
+                            <p id="typewriter"></p>
+                        </div>
+
+                    </div>
+                    <div class="box2">
+                        <div class="box1">
+                            <p style="color: white; padding-left: 10px;">You are the song i never want to pause.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="elements">
+
+                        <button>Legal</button>
+                        <button>Safety & Privacy Center</button>
+                        <button>Privacy policy</button>
+                        <button>cookies</button>
+                        <button>About Ads</button>
+                        <button>Accessibility</button>
+                        <br>
+                        <button>Cookies</button>
+                        <br>
+                        <button class="lang"><img src="lang.svg" alt="language">English</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="top-nav">
+                <div class="arrows">
+                    <button class="left-arrow"><img src="leftarrow.svg" alt=""></button>
+                    <button class="right-arrow"><img src="rightarrow.svg" alt=""></button>
+
+                </div>
+                <div class="login-side">
+                    <button id="themeToggle" title="Toggle Romantic Theme"
+                        style="margin-left:10px; padding: 0.4rem 0.8rem; border:none; cursor:pointer; border-radius:5px; background:#ff4d81; color:white; font-weight:bold;">Try
+                        this theme</button>
+
+                    <button class="sup">Sign up</button>
+                    <button class="login" type="button">Log in</button>
+
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="row1">
+                    <div class="text-area">
+                        <div class="heading">
+                            <h2>Popular playlists</h2>
+                        </div>
+                        <div class="showall-btn">
+                            <button>Show all</button>
+                        </div>
+
+                    </div>
+                    <div class="artists">
+                        <div class="cards">
+                            <img src="energetci.jpg" alt="" onclick="window.location.href='https://open.spotify.com/playlist/1sek7h21fxsYfuSpC0P1er?si=93309cf816c74e34'">
+                            <p id="name">Energetic</p>
+                            <p id="artist">Aarya</p>
+                        </div>
+                        <div class="cards">
+                            <img src="sleepy.jpg" alt="" onclick="window.location.href='https://open.spotify.com/playlist/1V8mhdWhPb0Uz6b8Obx1yL?si=7f536f44e49a4d51'">
+                            <p id="name">Sleepy</p>
+                            <p id="artist">Aarya</p>
+                        </div>
+                        <div class="cards">
+                            <img src="21.jpg" alt="" onclick="window.location.href='https://open.spotify.com/playlist/3JaKw2ibHmNoFC8QYpwF2g?si=190c597c750a46df'">
+                            <p id="name">21</p>
+                            <p id="artist">Playlist</p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <!-- <div class="row2">
+                    <div class="text-area2">
+                        <div class="heading2">
+                            <h2>Popular albums</h2>
+                        </div>
+                        <div class="showall-btn2">
+                            <button>Show all</button>
+                        </div>
+
+                    </div>
+                    <div class="albums">
+                        <div class="cards1">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Aashique 2</p>
+                            <p id="artist"> Mithoon</p>
+                        </div>
+                        <div class="cards1">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Aashique 2</p>
+                            <p id="artist"> Mithoon</p>
+                        </div>
+                        <div class="cards1">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Aashique 2</p>
+                            <p id="artist"> Mithoon</p>
+                        </div>
+                        <div class="cards1">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Aashique 2</p>
+                            <p id="artist"> Mithoon</p>
+                        </div>
+                        <div class="cards1">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Aashique 2</p>
+                            <p id="artist"> Mithoon</p>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row3">
+                    <div class="text-area3">
+                        <div class="heading3">
+                            <h2>Popular radio</h2>
+                        </div>
+                        <div class="showall-btn3">
+                            <button>Show all</button>
+                        </div>
+
+                    </div>
+                    <div class="radio">
+                        <div class="cards2">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Pritam</p>
+                            <p id="artist">Artist</p>
+                        </div>
+                        <div class="cards2">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Pritam</p>
+                            <p id="artist">Artist</p>
+                        </div>
+                        <div class="cards2">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Pritam</p>
+                            <p id="artist">Artist</p>
+                        </div>
+                        <div class="cards2">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Pritam</p>
+                            <p id="artist">Artist</p>
+                        </div>
+                        <div class="cards2">
+                            <img src="/logo/pritam.jpg" alt="">
+                            <p id="name">Pritam</p>
+                            <p id="artist">Artist</p>
+                        </div>
+
+
+                    </div>
+                </div> -->
+                <div class="right-footer-container">
+                    <div class="right-footer-box">
+                        <div class="company">
+                            <button>Company</button>
+                            <p><a href="#">Yes I</a></p>
+                            <p><a href="#">Absolutely</a></p>
+                            <p><a href="#">Love your ccmpany.</a></p>
+                        </div>
+
+                        <div class="links">
+                            <button>Useful links</button>
+                            <p><a href="https://few-lines.vercel.app/">Few Lines Link</a></p>
+                            <p><a href="https://special-flame.vercel.app/memories.html">Our Memories</a></p>
+                            <p><a href="https://lines-for-her.vercel.app/">What i think of you!</a></p>
+                        </div>
+                        <div class="plans">
+                            <button>Spotify plans</button>
+                            <p><a href="#">Don't know about spotify plans but </a></p>
+                            <p><a href="#">My plan is to</a></p>
+                            <p><a href="#">Be your bestfriend forever</a></p>
+                        </div>
+                        <div class="handles">
+                            <button><img src="instalogo.png" alt=""></button>
+                            <button><img src="xlogo.jpg" alt=""></button>
+                            <button><img src="59439.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <p id="copyright"> &#169 This friendship is reserved from 2023 to ♾️</p>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="custom-player">
+        <div class="player-left">
+            <img src="image2.png" alt="cover"/>
+            <div class="track-info">
+                <p class="track-title">A SMALL MESSAGE FROM</p>
+                <p class="track-artist">Ranbir kapoor</p>
+            </div>
+        </div>
+
+        <div class="player-center">
+            <div class="controls">
+
+                <button id="playPause" class="play-button">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="black">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                        <polygon points="9,7 9,17 17,12" fill="black" />
+                    </svg>
+                </button>
+
+
+            </div>
+            <div class="progress">
+                <span id="currentTime">0:00</span>
+                <input type="range" id="seek" value="0" min="0" max="100" />
+                <span id="duration">3:08</span>
+            </div>
+        </div>
+
+
+
+        <audio id="audio" src="audio.mp3"></audio>
+    </div>
+
+    <!-- Surprise Modal -->
+    <div id="loginSurpriseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>You're already logged into my heart 💚</p>
+        </div>
+    </div>
+
+    <div id="floating-hearts"></div>
+
+    <!-- Lyrics Modal -->
+    <div id="lyricsModal" class="modal" style="display:none;">
+        <div class="modal-content"
+            style="max-width: 500px; padding: 20px; background: #1c1c1c; border-radius: 10px; position: relative;">
+            <span id="closeLyrics"
+                style="position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 24px;">&times;</span>
+            <h3>Lyrics</h3>
+            <pre id="lyricsText"
+                style="white-space: pre-wrap; font-family: 'Poppins', sans-serif; font-size: 16px; max-height: 300px; overflow-y: auto; color: #b5b5b5;">
+Loading lyrics...
+    </pre>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("JS Loaded ✅");
+
+            const audio = document.getElementById('audio');
+            const playPauseBtn = document.getElementById('playPause');
+            const seek = document.getElementById('seek');
+            const currentTimeEl = document.getElementById('currentTime');
+            const durationEl = document.getElementById('duration');
+
+            let isPlaying = false;
+
+            playPauseBtn.addEventListener('click', () => {
+                if (isPlaying) {
+                    audio.pause();
+                    playPauseBtn.textContent = '▶';
+                } else {
+                    audio.play();
+                    playPauseBtn.textContent = '⏸';
+                }
+                isPlaying = !isPlaying;
+            });
+
+            audio.addEventListener('timeupdate', () => {
+                const current = audio.currentTime;
+                const total = audio.duration;
+
+                // 👇 Stop after 10 seconds
+                if (current >= 52) {
+                    audio.pause();
+                    playPauseBtn.textContent = '▶';
+                    isPlaying = false;
+                }
+
+                seek.value = (current / total) * 100;
+                currentTimeEl.textContent = formatTime(current);
+                durationEl.textContent = formatTime(total);
+            });
+
+
+            seek.addEventListener('input', () => {
+                const percent = seek.value;
+                audio.currentTime = (percent / 100) * audio.duration;
+            });
+
+            function formatTime(sec) {
+                const minutes = Math.floor(sec / 60);
+                const seconds = Math.floor(sec % 60).toString().padStart(2, '0');
+                return `${minutes}:${seconds}`;
+            }
+
+            // Login Modal
+            const modal = document.getElementById('loginSurpriseModal');
+            const loginBtn = document.querySelector('.login');
+            const closeBtn = document.querySelector('.close');
+
+            if (loginBtn) {
+                loginBtn.addEventListener('click', (e) => {
+                    console.log("Login button clicked 🎉");
+                    modal.style.display = "block";
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = "none";
+                });
+            }
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            const message = "Happy birthday bestieeee, thankyou for always being there 💛";
+            let i = 0;
+            const typewriter = document.getElementById('typewriter');
+
+            function type() {
+                if (i < message.length) {
+                    typewriter.textContent += message.charAt(i);
+                    i++;
+                    setTimeout(type, 75);
+                }
+            }
+            window.addEventListener('load', type);
+
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+
+                // Random horizontal position (0 to 100vw)
+                heart.style.left = Math.random() * 100 + 'vw';
+
+                // Random size between 10px and 25px
+                const size = 10 + Math.random() * 15;
+                heart.style.width = size + 'px';
+                heart.style.height = size + 'px';
+
+                // Random animation duration between 4s and 8s
+                heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+
+                document.getElementById('floating-hearts').appendChild(heart);
+
+                // Remove the heart after animation finishes to avoid clutter
+                setTimeout(() => {
+                    heart.remove();
+                }, (parseFloat(heart.style.animationDuration) * 1000));
+            }
+
+            // Create hearts continuously every 300ms
+            setInterval(createHeart, 1000);
+
+            const themeToggleBtn = document.getElementById('themeToggle');
+
+            themeToggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('romantic');
+
+                if (document.body.classList.contains('romantic')) {
+                    themeToggleBtn.textContent = 'Back to normal ';
+                } else {
+                    themeToggleBtn.textContent = 'try this theme';
+                }
+            });
+
+            const lyricsModal = document.getElementById('lyricsModal');
+            const closeLyricsBtn = document.getElementById('closeLyrics');
+            const lyricsText = document.getElementById('lyricsText');
+
+            const lyrics = `Before college, we were like two strangers—anjana anjaani.
+But I don’t know what kind of brahmastra you used that sparked our friendship.
+
+Before coming to Pune, I was just like Aisha from Wake Up Sid—lost and unsure.
+Then I met you, just like how Aisha met Sid.
+From that moment, living in Pune became easier.
+
+Somewhere along the way, without even realizing it, you became Aditi from Yeh Jawaani Hai Deewani.
+And this Bunny will always remember his Aditi, no matter how many years pass.
+
+I’m now ready to take on all your tamasha and matargashti.
+To listen to all your endless chatter, I’ll become half of Barfi—someone who just listens, even if he can’t always
+speak.
+
+After college ends, life without you will become Ae Dil Hai Mushkil.
+And so, this was the crazy, beautiful story of our friendship—our own Ajab Prem Ki Ghazab Kahani.
+
+And hey, don’t forget to treat me to your chillar party!
+You’ll always be a Rockstar to me.`;
+
+            audio.addEventListener('play', () => {
+                // Show the modal when audio starts playing
+                lyricsText.textContent = lyrics;  // load the lyrics
+                lyricsModal.style.display = 'flex';
+            });
+
+            closeLyricsBtn.addEventListener('click', () => {
+                lyricsModal.style.display = 'none';
+                audio.pause();  // optionally pause the audio when modal is closed
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === lyricsModal) {
+                    lyricsModal.style.display = 'none';
+                    audio.pause();
+                }
+            });
+
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
+
+
